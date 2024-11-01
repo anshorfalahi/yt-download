@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="window.location.href='/'" class="goto-v2-btn">Versi 1</button>
+
+    <div class="container">
+        <h1>YouTube Downloader</h1>
+        <input type="text" id="url" placeholder="Masukkan URL YouTube" required>
+        
+        <div class="buttons">
+            <button onclick="showQualityOptions('audio')">Download Audio</button>
+            <button onclick="showQualityOptions('video')">Download Video</button>
+        </div>
+
+        <div id="quality-container" style="display:none;">
+            <label for="quality">Pilih Kualitas:</label>
+            <select id="quality" class="quality-dropdown"></select>
+            <button onclick="download()">Mulai Download</button>
+        </div>
+
+        <div id="result"></div>
+        <!-- Animasi loading -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

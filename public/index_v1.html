@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tombol untuk menuju halaman V2 -->
+    <button onclick="window.location.href='/v2'" class="goto-v2-btn">Versi 2</button>
+
+    <div class="container">
+        <h1>YouTube  Downloader</h1>
+        <p>Masukkan URL YouTube untuk mengunduh video atau audio</p>
+        <form id="downloadForm">
+            <input type="text" id="urlInput" placeholder="Masukkan URL video YouTube" required>
+            <button type="submit">Download</button>
+        </form>
+
+        <!-- Animasi loading -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- Hasil download -->
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

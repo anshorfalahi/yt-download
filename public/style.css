@@ -1,0 +1,213 @@
+/* styles.css - gabungan style_v1.css dan style_v2.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Style untuk container */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input teks */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+}
+
+/* Button umum */
+button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:focus {
+    outline: none;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style dropdown kualitas */
+.quality-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    appearance: none;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: border-color 0.3s ease;
+    text-align: center;
+    text-align-last: center; /* Men-center teks yang dipilih */
+}
+
+.quality-dropdown:focus {
+    border-color: #4a90e2;
+}
+
+/* Tampilan hasil download */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fafafa;
+    display: none;
+    text-align: center;
+}
+
+.result img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.result h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.result p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.media-info {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Link download */
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #4a90e2;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #4a90e2;
+    transition: all 0.3s;
+}
+
+.download-link:hover {
+    background-color: #4a90e2;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animasi loading */
+.loading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #4a90e2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tombol interaktif */
+.goto-v2-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Pastikan tombol selalu di atas elemen lain */
+}
+
+.goto-v2-btn:hover {
+    background-color: #357ABD;
+}

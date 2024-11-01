@@ -1,0 +1,19 @@
+{
+  "name": "yt-unduh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Anshor Falahi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "description": "pengunduh media youtube"
+}
