@@ -9,7 +9,7 @@ This project is a YouTube media downloader that allows users to download YouTube
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/anshorfalahi/yt-unduh.git
    cd yt-unduh
    ```
 
@@ -70,4 +70,8 @@ This project is licensed under the ISC License.
 
 ## Author
 
-Anshor Falahi
+Anshor Falahi - [@anshorfalahi](instagram.com/anshorfalahi)
+
+```
+
+```
