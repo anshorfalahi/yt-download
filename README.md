@@ -70,4 +70,4 @@ This project is licensed under the ISC License.
 
 ## Author
 
-Anshor Falahi - [@anshorfalahi](instagram.com/anshorfalahi)
+Anshor Falahi - [anshorfalahi]
