@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'YOUR_API_KEY'; // Ganti dengan API key Anda https://api.neoxr.my.id/
 
 // Endpoint untuk server V1 (/api/download)
 app.post('/api/download_v1', async (req, res) => {
