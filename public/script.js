@@ -130,3 +130,62 @@ async function download() {
         result.innerHTML = `<p>Error: Tidak dapat mengunduh. Periksa URL dan coba lagi nanti.</p>`;
     }
 }
+
+//Yt Play by judul video
+document.getElementById('playForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const q = document.getElementById('titleInput').value;
+    const resultDiv = document.getElementById('result');
+    const loadingDiv = document.getElementById('loading');
+
+    // Tampilkan loading dan sembunyikan hasil sebelumnya
+    loadingDiv.style.display = 'block';
+    resultDiv.style.display = 'none';
+    resultDiv.innerHTML = '';
+
+    try {
+        // Kirim permintaan POST dengan URL sebagai body JSON
+        const response = await fetch('/api/play', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ q }) // mengirim URL dalam body sebagai JSON
+        });
+        const data = await response.json();
+
+        // Sembunyikan loading setelah data diterima
+        loadingDiv.style.display = 'none';
+
+        if (data.error) {
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `<p style="color: red;">${data.error}</p>`;
+            return;
+        }
+
+        const { title, thumbnail, duration, channel, views, publish, quality, size, url } = data
+
+        // Tampilkan hasil dan semua link download
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `
+            <img src="${thumbnail}" alt="${title}">
+            <h3>${title}</h3>
+            <p>Channel: ${channel}</p>
+            <p>Durasi: ${duration}</p>
+            <p>Views: ${views}</p>
+            <p>Published: ${publish}</p>
+            <p>Quality: ${quality}</p>
+            <p>Size: ${size}</p>
+            <a href="${url}" target="_blank" class="download-link">
+                Play Audio
+            </a>
+        `;
+
+    } catch (error) {
+        // Sembunyikan loading dan tampilkan pesan error
+        loadingDiv.style.display = 'none';
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `<p style="color: red;">Terjadi kesalahan: ${error.message}</p>`;
+    }   
+});
