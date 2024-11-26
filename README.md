@@ -18,6 +18,8 @@ This project is a YouTube media downloader that allows users to download YouTube
    npm install
    ```
 
+3. Change the `API_KEY` in the `server.js` file to your own API key Neoxr API.
+
 ## Usage
 
 1. Start the server:
@@ -32,10 +34,11 @@ This project is a YouTube media downloader that allows users to download YouTube
 
 - `/api/download_v1`: Endpoint for downloading media using Version 1.
 - `/api/download_v2`: Endpoint for downloading media using Version 2.
+- `/api/playlists`: Endpoint for fetching YouTube audio by tittle.
 
 ## Files
 
-- `public/index_v1.html`: HTML file for Version 1 of the interface.
+- `public/index_v1.html`: HTML file for Version 1 of the interface and play audio by tittle.
 - `public/index_v2.html`: HTML file for Version 2 of the interface.
 - `public/script.js`: Combined JavaScript file for both versions.
 - `public/style.css`: Combined CSS file for both versions.
@@ -48,6 +51,7 @@ This project is a YouTube media downloader that allows users to download YouTube
   - Simple interface to input YouTube URL and download media.
   - Displays loading animation while fetching data.
   - Shows download links for available formats.
+  - Play audio by tittle.
 
 - **Version 2**:
   - Enhanced interface with options to select media type (audio/video) and quality.
